@@ -18,7 +18,7 @@ def get_measure_units(id):
     return execute_sql(sql)
 
 def get_food_categories():
-    sql = f"select id,description from food_category;"
+    sql = f"select id,description from food_category order by id desc;"
     return execute_sql(sql)
 
 def get_food_by_category(category_id):
