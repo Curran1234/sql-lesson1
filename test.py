@@ -25,6 +25,10 @@ def get_food_by_category(category_id):
     sql = f"select * from food where food_category_id = {category_id};"
     return execute_sql(sql)
 
+def search_category(keyword):
+    sql = f"select * from food_category where description like '%{keyword}%'"
+    return execute_sql(sql)
+
 
 
 
@@ -53,4 +57,5 @@ def execute_sql(sql):
 #print(get_nutrients(2578053))
 #print(get_branded_food('red bull'))
 #print(get_measure_units(1004))
-print(get_food_by_category(9))
+#print(get_food_by_category(9))
+print(search_category("veg"))
